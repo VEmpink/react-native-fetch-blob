@@ -1,14 +1,14 @@
 // Copyright 2016 wkh237@github. All rights reserved.
 // Use of this source code is governed by a MIT-style license that can be
 // found in the LICENSE file.
-
-import RNFetchBlob from '../index.js'
+import {NativeModules} from 'react-native';
 import XMLHttpRequestEventTarget from './XMLHttpRequestEventTarget.js'
 import Log from '../utils/log.js'
 import Blob from './Blob.js'
 import ProgressEvent from './ProgressEvent.js'
 import URIUtil from '../utils/uri'
 
+const RNFetchBlob = NativeModules.RNFetchBlob;
 const log = new Log('XMLHttpRequest')
 
 log.disable()
