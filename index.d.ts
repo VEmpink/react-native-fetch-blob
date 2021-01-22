@@ -405,6 +405,7 @@ export interface Dirs {
     DownloadDir: string;
     DCIMDir: string;
     SDCardDir: string;
+    SDCardApplicationDir: string;
     MainBundleDir: string;
 }
 
@@ -475,7 +476,7 @@ export interface AndroidDownloadOption {
     /**
      * Boolean value that determines if notification will be displayed.
      */
-    showNotification: boolean 
+    showNotification: boolean
 }
 
 export interface AndroidApi {
@@ -488,7 +489,7 @@ export interface AndroidApi {
     actionViewIntent(path: string, mime: string): Promise<any>;
 
     /**
-     * 
+     *
      * This method brings up OS default file picker and resolves a file URI when the user selected a file.
      * However, it does not resolve or reject when user dismiss the file picker via pressing hardware back button,
      * but you can still handle this behavior via AppState.
